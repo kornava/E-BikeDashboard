@@ -42,28 +42,28 @@ Item {
             }
         }
 
-        Rectangle {
-            id: rectangle2
-            height: 180
-            color: "#ffffff"
+
+        BatteryComponent {
+            id: batteryComponent1
+            height: 185
             anchors.right: parent.right
-            anchors.rightMargin: 0
+            anchors.rightMargin: 1
             anchors.left: parent.left
-            anchors.leftMargin: 0
+            anchors.leftMargin: 1
             anchors.top: columnLayout1.bottom
-            anchors.topMargin: 0
+            anchors.topMargin: 1
         }
 
         Rectangle {
             id: rectangle3
             height: 180
             color: "#ffffff"
+            anchors.top: batteryComponent1.bottom
+            anchors.topMargin: 0
             anchors.left: parent.left
             anchors.leftMargin: 0
             anchors.right: parent.right
             anchors.rightMargin: 0
-            anchors.top: rectangle2.bottom
-            anchors.topMargin: 0
         }
 
 
@@ -80,6 +80,7 @@ Item {
             anchors.leftMargin: 0
             font.pixelSize: 12
         }
+
 
 
 
