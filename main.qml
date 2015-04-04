@@ -18,8 +18,8 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
-    MessageDialog {
-        id: messageDialog
+MessageDialog {
+    id: messageDialog
         title: qsTr("May I have your attention, please?")
 
         function show(caption) {
@@ -27,4 +27,5 @@ ApplicationWindow {
             messageDialog.open();
         }
     }
+
 }

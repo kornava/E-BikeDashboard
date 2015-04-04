@@ -54,31 +54,31 @@ Item {
             anchors.topMargin: 0
         }
 
-        Rectangle {
-            id: rectangle3
-            height: 180
-            color: "#ffffff"
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.top: rectangle2.bottom
-            anchors.topMargin: 0
-        }
-
 
         Text {
             id: textInfo
-            height: 60
             text: qsTr("SOME TEXT GOES HERE")
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
             styleColor: "#ffffff"
-            anchors.top: rectangle3.bottom
+            anchors.top: speed1.bottom
             anchors.topMargin: 0
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
             anchors.leftMargin: 0
             font.pixelSize: 12
+        }
+
+        Speed {
+            id: speed1
+            height: 180
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.top: rectangle2.bottom
+            anchors.topMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
         }
 
 
