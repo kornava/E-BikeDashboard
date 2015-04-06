@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
         <file>Speed.qml</file>
+        <file>BatteryComponent.qml</file>
     </qresource>
 </RCC>
