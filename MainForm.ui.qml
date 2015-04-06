@@ -55,17 +55,16 @@ Item {
         }
 
 
-        Rectangle {
-            id: rectangle3
-            height: 180
-            color: "#ffffff"
-            anchors.top: batteryComponent1.bottom
-            anchors.topMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-        }
+Speed {
+    id: speed1
+    height: 180
+    anchors.top: batteryComponent1.bottom
+    anchors.topMargin: 0
+    anchors.right: parent.right
+    anchors.rightMargin: 0
+    anchors.left: parent.left
+    anchors.leftMargin: 0
+}
 
         Text {
             id: textInfo
@@ -82,16 +81,6 @@ Item {
             font.pixelSize: 12
         }
 
-        Speed {
-            id: speed1
-            height: 180
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.top: rectangle2.bottom
-            anchors.topMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-        }
 
 
 
