@@ -17,8 +17,9 @@ Item {
         anchors.fill: parent
 
 
-        ColumnLayout {
-            id: columnLayout1
+
+ColumnLayout {
+    id: columnLayout1
             height: 60
             anchors.right: parent.right
             anchors.rightMargin: 0
@@ -43,22 +44,50 @@ Item {
         }
 
 
-        BatteryComponent {
-            id: batteryComponent1
-            height: 185
-            anchors.right: parent.right
-            anchors.rightMargin: 1
-            anchors.left: parent.left
-            anchors.leftMargin: 1
-            anchors.top: columnLayout1.bottom
-            anchors.topMargin: 1
-        }
 
+RowLayout {
+    id: rowLayout2
+    height: 100
+    anchors.top: columnLayout1.bottom
+    anchors.topMargin: 0
+    anchors.right: parent.right
+    anchors.rightMargin: 0
+    anchors.left: parent.left
+    anchors.leftMargin: 0
+
+    BatteryComponent {
+        id: batteryComponent1
+        height: 185
+        anchors.right: parent.right
+        anchors.rightMargin: 166
+        anchors.left: parent.left
+        anchors.leftMargin: 40
+        anchors.top: columnLayout1.bottom
+        anchors.topMargin: 0
+    }
+
+    Text {
+        id: text1
+        color: "#ffffff"
+        text: qsTr("100%")
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+        anchors.top: parent.top
+        anchors.topMargin: 0
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: batteryComponent1.right
+        anchors.leftMargin: 0
+        font.pixelSize: 50
+    }
+}
 
 Speed {
     id: speed1
     height: 180
-    anchors.top: batteryComponent1.bottom
+    anchors.top: rowLayout2.bottom
     anchors.topMargin: 0
     anchors.right: parent.right
     anchors.rightMargin: 0
@@ -80,6 +109,7 @@ Speed {
             anchors.leftMargin: 0
             font.pixelSize: 12
         }
+
 
 
 
